@@ -1,0 +1,7 @@
+{
+  "name": "plausibleVisitors",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
