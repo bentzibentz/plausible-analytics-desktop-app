@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { TimeperiodePipe } from '../../shared/pipes/timeperiode.pipe';
 
 @NgModule({
   imports: [
@@ -14,6 +14,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    TimeperiodePipe,
+  ]
 })
 export class HomePageModule {}

@@ -1,10 +1,18 @@
-const {app, BrowserWindow, Menu, clipboard} = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
 const url = require('url');
 const path = require('path');
 
-function onReady () {
-  win = new BrowserWindow({width: 620, height: 280})
-  win.loadURL(url.format({
+// TODO add splashscreen
+// TODO add app icon
+
+async function onReady () {
+  win = new BrowserWindow({
+    width: 620,
+    height: 280,
+    "min-width": 620,
+    "min-height": 280
+  })
+  await win.loadURL(url.format({
     pathname: path.join(
       __dirname,
       '/www/index.html'),
@@ -14,6 +22,10 @@ function onReady () {
 }
 
 app.on('ready', onReady);
+
+app.on("window-all-closed", () => {
+  app.quit();
+});
 
 const isMac = process.platform === 'darwin'
 
@@ -80,3 +92,4 @@ const template = [
 
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
+

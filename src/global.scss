@@ -28,3 +28,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alert-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.alert-button {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #581c87 !important;
+}

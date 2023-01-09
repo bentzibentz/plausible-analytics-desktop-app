@@ -3,6 +3,8 @@ import { ApiService } from '../../shared/services/api.service';
 import { CredentialsService } from '../../shared/services/credentials.service';
 import { AlertController, NavController } from '@ionic/angular';
 
+// TODO save timeperiode in storage and preselect in alert
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -139,5 +141,4 @@ export class HomePage implements OnInit, OnDestroy {
   async reloadRealtime(): Promise<any> {
     await this.getRealtimeVisits();
   }
-
 }

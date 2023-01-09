@@ -38,6 +38,9 @@
         <div class="text-4xl text-white font-semibold">
           {{uniqueVisitors}}
         </div>
+        <div class="text-white text-xs font-semibold mt-1">
+          ({{uniqueVisitorsPeriode | timeperiode}})
+        </div>
       </div>
       <div class="bg-gray-900 rounded p-4">
         <div class="mb-2 flex flex-row items-center justify-between">
@@ -50,6 +53,9 @@
         </div>
         <div class="text-4xl text-white font-semibold">
           {{pageViews}}
+        </div>
+        <div class="text-white text-xs font-semibold mt-1">
+          ({{pageViewsPeriode | timeperiode}})
         </div>
       </div>
     </div>
