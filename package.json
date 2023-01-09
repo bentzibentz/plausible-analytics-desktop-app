@@ -13,7 +13,8 @@
     "lint": "ng lint",
     "electron": "ng build && electron .",
     "electron:mac": "electron-packager ./ plausibleVisitors --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds --icon=./icons/appicons/icons/mac/icon.icns",
-    "electron:win": "electron-packager ./www plausibleVisitors --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='Plausible Visitors'"
+    "electron:win": "electron-packager ./www plausibleVisitors --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='Plausible Visitors'",
+    "build-dmg": "electron-installer-dmg ./release-builds/plausibleVisitors-darwin-x64/plausibleVisitors.app plausible-visitors-app"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "@ngneat/elf": "^2.3.0",
     "electron": "^22.0.0",
     "electron-icon-builder": "^2.0.1",
+    "electron-installer-dmg": "^4.0.0",
     "ionicons": "^6.0.3",
     "ngx-electron": "^2.2.0",
     "rxjs": "~7.5.0",
