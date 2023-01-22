@@ -140,5 +140,7 @@ export class HomePage implements OnInit, OnDestroy {
 
   async reloadRealtime(): Promise<any> {
     await this.getRealtimeVisits();
+    await this.getPageViews(this.pageViewsPeriode);
+    await this.getUniqueVisitors(this.uniqueVisitorsPeriode);
   }
 }
